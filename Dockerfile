@@ -22,4 +22,8 @@ RUN make -j3
 
 RUN make install
 
+##
+FROM i386/ubuntu:18.04
+
+COPY --from=0 /Qt/5.${QT_MINOR}.${QT_BUILD} .
 
